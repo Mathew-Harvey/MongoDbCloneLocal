@@ -10,17 +10,17 @@ Instructions:
 
 1. Extract the contents of the zip file to a directory of your choice.
 
-2. Open a terminal or command prompt and navigate to the directory where the script is located.
+2. Open a terminal or command prompt and navigate to the directory where the scripts are located.
 
-3. Run the script with the following command, replacing the placeholders with your actual values:
+3. Run the appropriate script for your operating system with the following command, replacing the placeholders with your actual values:
    - For Windows:
-     .\clone-mongodb.ps1 -ConnectionString "mongodb://username:password@host:port/database" -InstallPath "C:\path\to\install\mongodb"
+     mongo-sync.bat "mongodb://username:password@host:port/database" "C:\path\to\install\mongodb"
 
-   - For macOS:
-     ./clone-mongodb.ps1 -ConnectionString "mongodb://username:password@host:port/database" -InstallPath "$HOME/path/to/install/mongodb"
+   - For macOS or Linux:
+     ./mongo-sync.sh "mongodb://username:password@host:port/database" "$HOME/path/to/install/mongodb"
 
    Replace "mongodb://username:password@host:port/database" with the connection string for your remote MongoDB database.
-   Replace "C:\path\to\install\mongodb" (Windows) or "$HOME/path/to/install/mongodb" (macOS) with the desired installation path for MongoDB.
+   Replace "C:\path\to\install\mongodb" (Windows) or "$HOME/path/to/install/mongodb" (macOS or Linux) with the desired installation path for MongoDB.
 
 4. The script will check if MongoDB is installed locally. If it's not installed, the script will automatically download and install the correct version of MongoDB for your system.
 

@@ -1,12 +1,22 @@
 @echo off
-set "connectionString=mongodb://username:password@host:port/database"
-set "localDatabaseName=localdatabase"
+
+if "%~1"=="" (
+    echo Usage: mongo-sync.bat ^<connection_string^> ^<install_path^>
+    exit /b 1
+)
+
+if "%~2"=="" (
+    echo Usage: mongo-sync.bat ^<connection_string^> ^<install_path^>
+    exit /b 1
+)
+
+set connectionString=%1
+set installPath=%2
 
 echo Checking if the database is cloned...
-if exist "%localDatabaseName%" (
-    echo Database is already cloned. Syncing with the remote database...
-    powershell.exe -File sync-mongodb.ps1 -ConnectionString "%connectionString%" -LocalDatabaseName "%localDatabaseName%"
+if exist "%installPath%" (
+    echo Database is already cloned. Skipping cloning process.
 ) else (
     echo Database is not cloned. Cloning the remote database...
-    powershell.exe -File clone-mongodb.ps1 -ConnectionString "%connectionString%"
+    powershell.exe -File clone-mongodb.ps1 -ConnectionString "%connectionString%" -InstallPath "%installPath%"
 )
