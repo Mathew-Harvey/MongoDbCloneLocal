@@ -1,0 +1,78 @@
+# MongoDB data directory
+/mongodb-data/
+
+# MongoDB dump directory
+/dump/
+
+# Node.js dependencies
+/node_modules/
+
+# Python dependencies
+/venv/
+/__pycache__/
+*.pyc
+
+# Java dependencies
+/.gradle/
+/build/
+/target/
+*.jar
+*.war
+*.ear
+
+# Maven
+/log/
+/target/
+
+# Gradle
+/build/
+/.gradle/
+
+# Eclipse
+/.classpath
+/.project
+/.settings/
+
+# IntelliJ
+/.idea/
+*.iml
+*.iws
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# Visual Studio Code
+/.vscode/
+
+# Local environment files
+.env
+.env.local
+.env.*.local
+
+# Log files
+*.log
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.bak
+*.swp
+*~
+
+# Other
+.cache/
+.history/
+.tmp/
+*.tmp
+*.temp
+*.pid
+*.seed
+*.pid.lock
+*.sublime-project
+*.sublime-workspace
