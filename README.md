@@ -12,7 +12,10 @@ Instructions:
 
 2. Open a terminal or command prompt and navigate to the directory where the scripts are located.
 
-3. Run the appropriate script for your operating system with the following command, replacing the placeholders with your actual values:
+3. For macOS and Linux users, make the shell script executable by running the following command:
+   chmod +x mongo-sync.sh
+
+4. Run the appropriate script for your operating system with the following command, replacing the placeholders with your actual values:
    - For Windows:
      mongo-sync.bat "mongodb://username:password@host:port/database" "C:\path\to\install\mongodb"
 
@@ -20,15 +23,15 @@ Instructions:
      ./mongo-sync.sh "mongodb://username:password@host:port/database" "$HOME/path/to/install/mongodb"
 
    Replace "mongodb://username:password@host:port/database" with the connection string for your remote MongoDB database.
-   Replace "C:\path\to\install\mongodb" (Windows) or "$HOME/path/to/install/mongodb" (macOS or Linux) with the desired installation path for MongoDB.
+   Replace "C:\path\to\install\mongodb" (Windows) or "$HOME/path/to\install\mongodb" (macOS or Linux) with the desired installation path for MongoDB.
 
-4. The script will check if MongoDB is installed locally. If it's not installed, the script will automatically download and install the correct version of MongoDB for your system.
+5. The script will check if MongoDB is installed locally. If it's not installed, the script will automatically download and install the correct version of MongoDB for your system.
 
-5. After the installation (if required), the script will clone the remote database locally to the specified installation path.
+6. After the installation (if required), the script will clone the remote database locally to the specified installation path.
 
-6. Once the cloning process is complete, the script will display the local connection string for the cloned database.
+7. Once the cloning process is complete, the script will display the local connection string for the cloned database.
 
-7. The script will also open the local MongoDB instance with the cloned database.
+8. The script will also open the local MongoDB instance with the cloned database.
 
 Note: Make sure you have the necessary permissions and access to the remote MongoDB database.
 
